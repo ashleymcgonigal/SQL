@@ -1,0 +1,31 @@
+# SQL
+SQL Portfolio
+
+--Create a coffee store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, aisle INTEGER, color TEXT);
+
+INSERT INTO store VALUES (1, "coffee_beans", 15, 3, "black");
+INSERT INTO store VALUES (2, "mug", 10, 5, "white");
+INSERT INTO store VALUES (3, "espresso_machine", 300, 2, "silver");
+INSERT INTO store VALUES (4, "creamer", 5, 1, "white");
+INSERT INTO store VALUES (5, "syrup", 3, 4, "blue");
+INSERT INTO store VALUES (6, "water", 1, 6, "clear");
+INSERT INTO store VALUES (7, "grinder", 30, 3, "silver");
+INSERT INTO store VALUES (8, "sandwich", 5, 4, "orange");
+INSERT INTO store VALUES (9, "bagel", 3, 4, "blue");
+INSERT INTO store VALUES (10, "juice", 5, 4, "orange");
+INSERT INTO store VALUES (11, "frother", 20, 3, "black");
+INSERT INTO store VALUES (12, "shirt", 25, 5, "white");
+INSERT INTO store VALUES (13, "jacket", 35, 5, "black");
+INSERT INTO store VALUES (14, "hat", 20, 5, "pink");
+INSERT INTO store VALUES (15, "beanie", 15, 5, "pink");
+
+--Display the database ordered by price
+SELECT * FROM store ORDER BY price; 
+
+--What is the sum of all the items in the store?
+SELECT SUM(price) FROM store;
+
+--Display the database grouped by the id number
+SELECT * FROM store GROUP BY id;
